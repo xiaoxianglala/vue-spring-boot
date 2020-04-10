@@ -1,0 +1,21 @@
+server:
+  port: 9090
+
+#数据库配置
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://120.26.184.92:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+
+#mybatis配置
+mybatis:
+  mapper-locations: classpath:com.zjky.server.mapper/**/*.xml
+  type-aliases-package: com.zjky.server.entity
+
+
+#打印sql日志
+logging:
+  level:
+    com.cjky.sale.mapper: debug
